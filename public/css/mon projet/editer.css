@@ -1,0 +1,31 @@
+body{
+	padding-top: 100px;
+	background-color: rgb(10,144,255);
+}
+li{
+	margin-bottom: 10px;
+}
+header{
+	 position: fixed;
+	 top:0px;
+	 color: rgb(0,255,255);
+	 background-color: rgb(10,120,255);
+	 width: 100%;
+}
+th{
+	font-size: 20px;
+}
+h2,th,input{
+	color: rgb(0,255,255);
+}
+thead:hover
+{
+	background-color: white;
+}
+input{
+	background-color: rgba(10,200,255,0.3);
+	border:1px rgb(10,120,255) solid ;
+}
+#signature{
+	font-size: 10px;
+}

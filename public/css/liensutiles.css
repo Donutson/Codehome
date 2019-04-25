@@ -1,0 +1,33 @@
+body{
+	padding-top: 100px;
+	background-color: rgb(10,144,255);
+}
+header{
+	 position: fixed;
+	 top:0px;
+	 color: rgb(0,255,255);
+	 background-color: rgb(10,120,255);
+	 width: 100%;
+}
+li{
+	margin-bottom: 10px;
+	background-color: white;
+	font-size: 16px;
+	padding: 20px;
+}
+h1{
+	margin-bottom: 50px;
+	color: rgb(0,255,255);
+	font-weight: bold;	
+}
+a[class*='detail']{
+	position:absolute;
+	right: 40px;
+}
+li:hover
+{
+	background-color: rgb(64,224,208);
+}
+#signature{
+	font-size: 10px;
+}

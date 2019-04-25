@@ -1,0 +1,17 @@
+body{
+	padding-top: 100px;
+	background-color: rgb(10,144,255);
+}
+li{
+	margin-bottom: 10px;
+}
+header{
+	 position: fixed;
+	 top:0px;
+	 color: rgb(0,255,255);
+	 background-color: rgb(10,120,255);
+	 width: 100%;
+}
+#signature{
+	font-size: 10px;
+}
