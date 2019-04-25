@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/mon projet/editer.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<title>CodeHome|Mon projet|Editer</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<nav><h3><i class='fab fa-slack'></i> CodeHome <span id='signature'>Une réalisation de l'étudiant GOUGOU NELSON du groupe Winner de l'école NaN</span></h3></nav>
+		</header>
+		<div class="col-xs-offset-1">
+			<form method="post" action="/traitementedition">
+				<div class="form-group">
+					<input type="submit" value="VALIDER" class="input-lg"> <a class='btn btn-primary down' href="/pages/monprojet">RETOUR</a>
+				</div>
+				<div class="form-group">
+					<label for="nom"><h2>Nom du projet:</h2></label>
+					 <input class='input-lg' type="text" name="nom" id="nom">
+				</div>
+				<div class="form-group">
+					<label for="type"><h2>Type de maison:</h2></label>
+					<input class='input-lg' type="text" name="type" id="type">
+				</div>
+				<div class="form-group">
+					<label for="budget"><h2>Budget:</h2></label>
+					<input class='input-lg' type="number" name="budget" id="budget">
+				</div>
+				<div class="form-group" id="masquer" style="display: none;">
+						<label><h2>CONTACTS IMPORTANT</h2></label>
+					</div>
+				<section class="table-responsive col-xs-10" style="display: none;">
+				<table class="table table-condensed table-bordered ">
+					<thead>
+						<tr>
+							<th class="text-center">
+								NOM
+							</th>
+							<th class="text-center">
+								CONTACT
+							</th>
+						</tr>
+					</thead>
+					<tbody id="contact">
+						
+					</tbody>
+				</table>
+			</section>
+			<div class="container" id="controls" style="display: none;">
+				<a class="btn btn-warning" id="add1">Ajouter une ligne</a> <a class="btn btn-danger" id="withdraw1">Retirer une ligne</a>
+			</div>
+			<div class="form-group" id="masquer1" style="display: none;">
+					<label><h2>ETAPES DU PROJET</h2></label>
+				</div>
+			<section class="table-responsive col-xs-10"  style="display: none;">
+				<table class="table table-condensed table-bordered ">
+					<thead>
+						<tr>
+							<th class="text-center">
+								ETAPE
+							</th>
+							<th class="text-center">
+								DEBUT
+							</th>
+						</tr>
+					</thead>
+					<tbody id="etapes">
+						
+					</tbody>
+				</table>
+			</section>
+			<div class="container" id="controls1" style="display: none;">
+				<a class="btn btn-warning" id="add2">Ajouter une ligne</a> <a class="btn btn-danger" id="withdraw2">Retirer une ligne</a>
+			</div>
+			</form>	
+		</div>
+		<i class="fas fa-chevron-circle-down fa-2x btn btn-info" id="down"></i>
+		<i class="fas fa-chevron-circle-up fa-2x btn btn-info" id="up" style="display: none;"></i>
+	</div>
+	<script src="../../js/editer.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/liensutiles.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<title>CodeHome|Liens utiles</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<nav><h3><i class='fab fa-slack'></i> CodeHome <span id='signature'>Une réalisation de l'étudiant GOUGOU NELSON du groupe Winner de l'école NaN</span></h3></nav>
+		</header>
+		<h1>LIENS UTILES</h1>
+		<!-- Affichage des liens utiles -->
+		<ul class="list-unstyled">
+			<% for(lien of liens){%>
+			<li>
+				<a href= <%= lien.adresse %>><%= lien.titre %></a> 
+				<a class='btn btn-primary detail' href=<%= "/pages/liensutiles/affiche/"+lien.titre %>>DETAIL</a>
+			</li>
+			<% }%>
+		</ul>
+		<a class='btn btn-primary' href="/">RETOUR</a>
+	</div>
+
+</body>
+</html>

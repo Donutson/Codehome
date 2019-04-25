@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/mon projet/voir.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<title>CodeHome|Mon projet|Voir</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<nav><h3><i class='fab fa-slack'></i> CodeHome <span id='signature'>Une réalisation de l'étudiant GOUGOU NELSON du groupe Winner de l'école NaN</span></h3></nav>
+		</header>
+		<div class="col-xs-offset-1">
+			<h2 class="text-center">INFORMATIONS</h2>
+			<h2>Nom du projet:<%= valeur.nom %></h2>
+			<h2>Type de maison:<%= valeur.type %></h2>
+			<h2>Budget:<%= valeur.budget %></h2>
+			<h2 id='contact' style="display: none;">CONTACTS IMPORTANT</h2>
+			<section class="table-responsive col-xs-6" style="display: none;">
+				<table class="table table-condensed table-bordered ">
+					<thead>
+						<tr>
+							<th class="text-center">
+								NOM
+							</th>
+							<th class="text-center">
+								CONTACT
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% for(contact of contacts){%>
+						<tr>
+							<td>
+								<%= contact.nom %>
+							</td>
+							<td>
+								<% let liencontact='/traitementretraitcontact/'+contact.id%>
+								<%= contact.contact %>	<a href=<%= liencontact %> class="btn-danger" style="text-decoration: none">RETIRER</a>
+							</td>
+						</tr>
+						<% }%>
+					</tbody>
+				</table>
+			</section>
+		</div>
+		</div>
+		<div class="container">
+			<div class="col-xs-offset-1">
+			<h2 id='etapes' style="display: none;">ETAPES DU PROJET</h2>
+			<section class="table-responsive col-xs-6" style="display: none;">
+				<table class="table table-condensed table-bordered">
+					<thead>
+						<tr>
+							<th class="text-center">
+								ETAPE
+							</th>
+							<th class="text-center">
+								DEBUT
+							</th>
+							<th class="text-center">
+								FIN
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% for(etape of etapes){%>
+						<tr>
+							<td>
+								<%= etape.etape %>
+							</td>
+							<td>
+								<%= etape.debut %>
+							</td>
+							<td>
+								<% if(etape.fin){ %>
+								<%= etape.fin%>
+								<% }%>
+								
+								<% if(!etape.fin){ %>
+								<% let lienetape='/traitementetape/'+etape.id%>
+								<a href=<%= lienetape %> class="btn-warning text-center">FINIR</a>
+								<% }%>
+							</td>
+						</tr>
+						<% }%>
+					</tbody>
+				</table>
+			</section>
+		</div>
+	<div class="container">
+		<i class="fas fa-chevron-circle-down fa-2x btn btn-info" id="down"></i>
+		<i class="fas fa-chevron-circle-up fa-2x btn btn-info" id="up" style="display: none;"></i>
+	</div>
+		</div>
+		
+	<div class="container">
+		<a class='btn btn-primary' href="/pages/monprojet">RETOUR</a><a class='btn btn-danger' href="/supprimerprojet">REINITIALISER</a>
+	</div>
+	<script src="../../js/voir.js"></script>
+</body>
+</html>
