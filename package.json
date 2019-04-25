@@ -1,0 +1,23 @@
+{
+  "name": "codehome",
+  "version": "1.0.0",
+  "description": "plateforme d'assistance pour la construction de sa maison",
+  "main": "routes.js",
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "nelgoug@gmail.com"
+  },
+  "author": "gougou nelson",
+  "license": "ISC"
+}
